@@ -1,0 +1,24 @@
+v05----------------------------
+-adding user associations
+   (comemnts+campgrounds)
+-adding update and destroy to campgrounds
+-adding campgrounds authorizations
+-adding update and destroy to comments
+-adding comemnts authorizations
+-refactoring middleware
+-UI improvements
+
+
+
+v04-----------------------------
+-adding authentication using passport
+-refactoring app.js
+-UI improvements
+
+
+
+
+v03------------------------------
+-using modules to clean clitter
+-giving initial styling
+-UI improvements

@@ -1,0 +1,43 @@
+[
+  {
+    name: 'Cumberland Falls',
+    image: 'https://www.reserveamerica.com/webphotos/racms/articles/images/b6d27395-aca6-4165-b0c2-1bcb03122a4b_image2_Cumberland-Falls-State-Park.jpg',
+    description: `If Niagara Falls is too far, come visit the next best thing. Cumberland Falls is what many call the "Niagara of the South." This natural wonder at 125-feet wide, is breathtaking and majestic in its grandeur. But that's not all; this scenic camping spot is home to the "moonbow," a lunar rainbow that is found nowhere else in the Western Hemisphere.`
+  },
+  {
+    name: 'Buffalo Bill State Park',
+    image: 'https://www.reserveamerica.com/webphotos/racms/articles/images/b6d27395-aca6-4165-b0c2-1bcb03122a4b_image2_Buffalo-Bill-SP.jpg',
+    description: "At an elevation of 5,400 feet, this scenic camping spot is a perfect stop Located about 40 miles from Yellowstone National Park's east entrance and 9 miles from Cody, Wyoming, the Park is in an excellent location to explore the area's rich history, sightseeing and wildlife. Scenic mountains dominate the scenery at Buffalo Bill State Park. The banks of the North Fork and Shoshone Rivers sit at the base of surrounding mountains, painting the ultimate wildlife picture for you to enjoy."
+  },
+  {
+    name: 'Highlands Hammock State Park',
+    image: 'https://www.reserveamerica.com/webphotos/racms/articles/images/b6d27395-aca6-4165-b0c2-1bcb03122a4b_image2_Highlands-Hammock-SP.jpg',
+    description: "Despite what the name suggests, this is not a scenic camping spot where you want to lay around in a hammock. Untouched hardwood forests present beauty often unfound. Nine separate nature trails offer a variety of wildlife and scenery, and don't forget to explore the cypress swamp. Not sure where to start? Take a guided ranger tour to be sure you catch all the best sights."
+  },
+  {
+    name: 'Staunton State Park',
+    image: "With its diversity of pines, spruce, fir and aspen trees, each season is a delight for photographers and sightseers visiting the park. The parks 3,000 acres offers a myriad of outdoor recreation opportunities and it’s thirty miles of scenic trails invite you to explore the park's rare beauty. Staunton is sure to excite waterfalls and soaring granite cliffs over 10,000’.",
+    description: 'https://www.reserveamerica.com/webphotos/racms/articles/images/b6d27395-aca6-4165-b0c2-1bcb03122a4b_image2_Staunton-SP-3.jpg'
+  },
+  {
+    name: 'South Mountains State Park',
+    image: 'https://www.reserveamerica.com/webphotos/racms/articles/images/b6d27395-aca6-4165-b0c2-1bcb03122a4b_image2_Spunt-Mountains-SP.jpg',
+    description: 'An 80-foot waterfall, mountain streams and more than 40 miles of dense forest trails make this scenic camping area a must-see. In one of the state’s most rugged areas, you may never want to leave the campground, with its views of looming peaks and the Jacob Fork River. Explore the wilderness on bike or foot through miles of trails.'
+  },
+  {
+    name: 'Lewis and Clark State Park',
+    image: 'https://www.reserveamerica.com/webphotos/racms/articles/images/b6d27395-aca6-4165-b0c2-1bcb03122a4b_image2_Lewis-Clark-SP.jpg',
+    description: "Montana's first and best-known state park provides nothing but beauty at this scenic camping spot. The park features one of the most highly
+decorated limestone caverns in the Northwest. Naturally air conditioned, these spectacular caves, lined with stalactites, stalagmites, columns, and helictites, date back through time."
+  },
+  {
+    name: 'Nehalem Bay State Park',
+    image: 'https://www.reserveamerica.com/webphotos/racms/articles/images/635a0b9d-a566-46cb-acf7-c942b889efea_image2_goblin-valley-state-park-yurts.jpg',
+    description: 'Nestled between the bay and ocean, Nehalem Bay State Park comprises a 4 mile-long sandspit that juts out into the water. The campground is set amidst shore pines surrounded by rolling dunes. A short walk over the dunes is the beach, a favorite spot for sea-lovers in search of relaxation and shore-time activities like flying kites, building sand castles, or fishing. Take a walk along a forest trail for  breathtaking views of the bay, and possibly spot grazing deer or elk.'
+  },
+  {
+    name: 'Golden Hill State Park',
+    image: 'https://www.reserveamerica.com/webphotos/NY/pid317/sid268116/0/540x360.jpg',
+    description: 'This 500-acre park is located on the sweeping south shore of Lake Ontario. Within the park is the Thirty Mile Point Lighthouse, built in 1875 from hand-carved stone. The striking structure was added to the National Register of Historic Places in 1984 and is open to the public.'
+  }
+]

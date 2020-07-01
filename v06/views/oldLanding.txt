@@ -1,0 +1,10 @@
+
+<%- include ("partials/header") %> 
+<div class="container mx-auto">
+    <h1 class="display-4 jumbotron">Landing page</h1>
+
+    <a class="btn btn-primary btn-block mx-auto btn-lg " style="width: 30%;" href="/campgrounds">View campgrounds</a>
+</div>
+
+
+<%- include ("partials/footer") %> 

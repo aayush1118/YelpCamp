@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@400;700&display=swap');
+
+body{
+    background-color: #fff;
+    font-family: 'Nunito', sans-serif;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23007bff' fill-opacity='0.11'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;   
+}
+
+.card .caption{
+    padding: 9px;
+}
+.card{
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+
+}
+.card img{
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+#camp-card-title{
+    padding: 0.5em 1em 0.5em 1em;
+    margin: 0;
+    background-color: #ffffff;
+
+}
+#camp-card a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+#camp-card{
+    transition: box-shadow 0.4s ;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+#camp-card:hover{
+    box-shadow:
+    0 0.7px 1.3px  rgba(0, 0, 0, 0.047),
+    0 1.6px 5.1px  rgba(0, 0, 0, 0.059),
+    0 3px 11.7px   rgba(0, 0, 0, 0.066),
+    0 5.4px 22.1px rgba(0, 0, 0, 0.071),
+    0 10px 37.8px  rgba(0, 0, 0, 0.077),
+    0 24px 72px    rgba(0, 0, 0, 0.1);
+}
+
+.navbar{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#new-form{
+    background-color: #fff;
+    margin: 0 auto;
+    width: 50%;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow:
+    0 0.7px 1.3px rgba(0, 0, 0, 0.047),
+    0 1.6px 5.1px rgba(0, 0, 0, 0.059),
+    0 3px 11.7px rgba(0, 0, 0, 0.066),
+    0 5.4px 22.1px rgba(0, 0, 0, 0.071),
+    0 10px 37.8px rgba(0, 0, 0, 0.077),
+    0 24px 72px rgba(0, 0, 0, 0.1);
+}
+
+#new-form label{
+    padding-bottom: 0;
+    font-size: 0.9em;
+    padding-left: 0.2em;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+
+
+}
+
+#new-title{
+    font-family: 'Montserrat', sans-serif;
+    margin: 1em;
+}
+
+#new-form .grid-container{
+    display: grid;
+    grid-template-columns:repeat(2,45%);
+    grid-column-gap: 10%;
+    align-content: space-around;
+    padding: 1em;
+
+}
+
+.grid-container .btn:first-child{
+    box-shadow:
+    0 0.5px 15.8px rgba(0, 0, 0, 0.061),
+    0 1.6px 25.3px rgba(0, 0, 0, 0.089),
+    0 7px 55px rgba(0, 0, 0, 0.15)  ;
+
+}
+
+.comment{
+    background-color: #fff;
+
+}
+
+#nav-username{
+    color: #fff;
+    padding: .5rem 1rem;
+    text-transform: capitalize;   
+}
+
+#yelpCampLogo{
+    background: #fff;
+    color: #007bff;
+    padding: .25rem;
+    border-radius: .25rem;
+    margin: 0 0.5rem;
+}
+
+#campDeleteForm{
+    display: inline;
+}
+
+#commentDelete{
+    display: inline;
+}
+
+#comments{
+    background-color: #ffffff;
+}
+
+#comments:nth-child(odd){
+    background-color: #f1f1f1;
+}
+
+#comments > div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+

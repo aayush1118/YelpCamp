@@ -1,0 +1,17 @@
+<%- include ("../partials/header") %>
+<div class="container">
+    <h2 class="text-center" id="new-title">Edit comment <%= campground_id.name %> </h2>
+
+    <form class="form-group" id="new-form" action="/campgrounds/<%= campground_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+        
+        <label class="col-form-label" for="comment[text]">Comment</label>
+        <input class="form-control" autofocus type="text" name="comment[text]" value="<%= comment.text %> ">
+
+        <div class="grid-container">
+            <button class="btn btn-success">submit</button>
+            <a class="btn-light btn" href="/campgrounds">Go Back</a>
+        </div>
+
+    </form>
+</div>
+<%- include ("../partials/footer") %> 

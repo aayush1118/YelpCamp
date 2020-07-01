@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@400;700&display=swap');
+
+body{
+    background-color: #f0f0f0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card .caption{
+    padding: 9px;
+}
+.card{
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+#camp-card-title{
+    padding: 0.5em 1em 0.5em 1em;
+    margin: 0;
+}
+#camp-card a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+#camp-card{
+    transition: box-shadow 0.5s ;
+    padding: 0;
+    max-width: calc(33.33% - 2em);
+    margin: 1em;
+}
+
+#camp-card:hover{
+    box-shadow:
+    0 0.7px 1.3px rgba(0, 0, 0, 0.047),
+    0 1.6px 5.1px rgba(0, 0, 0, 0.059),
+    0 3px 11.7px rgba(0, 0, 0, 0.066),
+    0 5.4px 22.1px rgba(0, 0, 0, 0.071),
+    0 10px 37.8px rgba(0, 0, 0, 0.077),
+    0 24px 72px rgba(0, 0, 0, 0.1);
+    
+
+}
+
+.navbar{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#new-form{
+    background-color: whi;
+    margin: 0 auto;
+    width: 50%;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow:
+    0 0.7px 1.3px rgba(0, 0, 0, 0.047),
+    0 1.6px 5.1px rgba(0, 0, 0, 0.059),
+    0 3px 11.7px rgba(0, 0, 0, 0.066),
+    0 5.4px 22.1px rgba(0, 0, 0, 0.071),
+    0 10px 37.8px rgba(0, 0, 0, 0.077),
+    0 24px 72px rgba(0, 0, 0, 0.1);
+}
+
+#new-form label{
+    padding-bottom: 0;
+    font-size: 0.9em;
+    padding-left: 0.2em;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+
+
+}
+
+#new-title{
+    font-family: 'Montserrat', sans-serif;
+    margin: 1em;
+}
+
+#new-form .grid-container{
+    display: grid;
+    grid-template-columns:repeat(2,45%);
+    grid-column-gap: 10%;
+    align-content: space-around;
+    padding: 1em;
+
+}
+
+.grid-container .btn:first-child{
+    box-shadow:
+    0 0.5px 15.8px rgba(0, 0, 0, 0.061),
+    0 1.6px 25.3px rgba(0, 0, 0, 0.089),
+    0 7px 55px rgba(0, 0, 0, 0.15)  ;
+
+}

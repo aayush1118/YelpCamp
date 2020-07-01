@@ -1,0 +1,20 @@
+<%- include ("../partials/header") %>
+<div class="container">
+    <h2 class="text-center" id="new-title">Create a New Commnet to <%= campground.name %> </h2>
+
+    <form class="form-group" id="new-form" action="/campgrounds/<%= campground._id %>/comments " method="POST">
+        
+        <label class="col-form-label" for="comment[text]">Comment</label>
+        <input class="form-control" autofocus type="text" name="comment[text]" placeholder="Text">
+
+        <label class="col-form-label" for="comment[author]">Author</label>
+        <input class="form-control" type="text" name="comment[author]" disabled value="<%= currentUser.username %> " placeholder="author">
+
+        <div class="grid-container">
+            <button class="btn btn-success">submit</button>
+            <a class="btn-light btn" href="/campgrounds">Go Back</a>
+        </div>
+
+    </form>
+</div>
+<%- include ("../partials/footer") %> 

@@ -21,7 +21,7 @@ const PORT           = process.env.PORT || 3000;
 
 //server setup
 mongoose.set("useUnifiedTopology",true);
-mongoose.connect("mongodb://localhost/yelp_camp_v06",{useNewUrlParser:true});
+mongoose.connect("mongodb://localhost/yelp_camp_v07",{useNewUrlParser:true});
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");

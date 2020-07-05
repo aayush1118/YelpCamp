@@ -1,15 +1,16 @@
 
 <%- include ("../partials/header") %> 
-<div class="container">
-    <header class="jumbotron">
-        <h1>Welcome to YelpCamp</h1>
-        YelpCamp.com provides convenient access to all things outdoors
+<div class="outerJumbotron">
+    <div class="jumbotron">
+        <h1 class="display-4">YelpCamp</h1>
+        <p class="lead">YelpCamp is a place to share beautiful campsites on Internet.</p>
+        <p><a href="/login" class="btn btn-success">Join now !</a> to share campsites on YelpCamp.</p>
+        <p><a href="/campgrounds/new" class="btn btn-lg btn-light">Add New Campground</a></p>
+    </div>
+</div>
 
-        <p>
-            <a class="btn btn-primary mt-3" href="/campgrounds/new">Add new Campground</a>
-        </p>
 
-    </header>
+<div id="campground-grid" class="container">
     <div class="row">
         <% campgrounds.forEach(function(campground){ %>
             <div class=" col-md-4 col-sm-6 col-12">
@@ -26,7 +27,5 @@
             </div>
         <% }); %>
     </div>
-
-
 </div>
 <%- include ("../partials/footer") %> 

@@ -11,6 +11,55 @@ body{
     background-attachment: fixed;   
     height: 100%;
 }
+
+/* footer  */
+footer{
+    background-color: #1f1f1f;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 6.5rem;
+}
+
+footer >.grid-container{
+    margin: 0 auto;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px , 1fr));
+    grid-gap: 0.5rem;
+    padding: 3rem 0;
+    justify-self: center;
+    align-content: space-around;
+
+}
+
+footer >.grid-container >a{
+    color: #808080;
+    text-decoration: none;
+}
+
+footer >.btn-top{
+    background-color: #2c2c2c;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 0.5rem 0;
+    transition: all 0.2s;
+}
+
+footer >.btn-top:hover{
+    background-color: #363636;
+}
+
+footer >.bottom-banner{
+    color: #585858;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    padding-bottom: 1em;
+
+}
 /* classes */
 .card .caption{
     padding: 9px;
@@ -76,9 +125,10 @@ body{
 }
 
 #new-form{
+    max-width: 600px;
+    /* width: 50%; */
     background-color: #fff;
     margin: 0 auto;
-    width: 50%;
     padding: 1em;
     border-radius: 1em;
     box-shadow:
@@ -88,6 +138,7 @@ body{
     0 5.4px 22.1px rgba(0, 0, 0, 0.071),
     0 10px 37.8px rgba(0, 0, 0, 0.077),
     0 24px 72px rgba(0, 0, 0, 0.1);
+    margin-top: 2em;
 }
 
 #new-form label{
@@ -96,13 +147,14 @@ body{
     padding-left: 0.2em;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-
-
+    color: #2c2c2c;
 }
 
 #new-title{
-    font-family: 'Montserrat', sans-serif;
-    margin: 1em;
+    font-family: 'Ubuntu', sans-serif;
+    color: #808080;
+    font-weight: bold;
+    padding-left: 0.5em;
 }
 
 #new-form .grid-container{
@@ -176,42 +228,30 @@ body{
     margin: 1em 0 0 0;
 }
 
-footer{
-    background-color: #1f1f1f;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
+.flash-message >div{
+    background-color: white;
+    float: right;
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-family: 'Nunito', sans-serif;
+    padding: 1rem;
+    border-radius: 0.4rem 0 0 0.7rem;
+    border: #a0a0a0 2px solid;
+    border-right: none;
+    margin: 0.5em 0;
+    font-size: 1.3em;
+    color: #363636;
+    /* transform: translateX(100%); */
+    animation: flash 1s ease-in-out 3s 1 forwards;
 }
 
-footer >.grid-container{
-    margin: 0 auto;
-    width: 70vw;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px , 1fr));
-    grid-gap: 0.5rem;
-    padding: 3rem 0;
-    justify-self: center;
-    align-content: space-around;
-
+.flash-message >.error{
+    background-color: #ffe6e8;
+}
+.flash-message >.success{
+    background-color: #e7ffec;
 }
 
-footer >.grid-container >a{
-    color: #808080;
-    text-decoration: none;
-}
-
-footer >.btn-top{
-    background-color: #2c2c2c;
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    padding: 0.5rem 0;
-    transition: all 0.2s;
-}
-
-footer >.btn-top:hover{
-    background-color: #363636;
+@keyframes flash{
+    /* 0% {transform: translateX(-100%);}   */
+    100%{transform: translateX(100%);}
 }

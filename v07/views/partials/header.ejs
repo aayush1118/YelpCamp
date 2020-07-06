@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/10e3f17fc7.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- navbar  -->
     <nav class="navbar navbar-dark bg-primary navbar-expand-lg" id="nav-top">
         <div class="container-fluid">
             <a href="/" class="navbar-brand"><i id="yelpCampLogo" class="fas fa-compass"></i> YelpCamp</a>
@@ -29,7 +30,8 @@
             </div>
         </div>
     </nav>
-    <div class="container">
+    <!-- flash messages -->
+    <!-- <div class="container">
         <% if (error && error.length >0) { %>
             <div class="alert alert-danger" role="alert">
                 <%= error %>
@@ -37,6 +39,19 @@
         <% } %>
         <% if (success && success.length >0) { %>
             <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>       
+        <% } %>
+    </div> -->
+
+    <div class="flash-message">
+        <% if (error && error.length >0) { %>
+            <div class="error">
+                <%= error %>
+            </div>       
+        <% } %>
+        <% if (success && success.length >0) { %>
+            <div class="success">
                 <%= success %>
             </div>       
         <% } %>

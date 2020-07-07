@@ -60,6 +60,30 @@ footer >.bottom-banner{
     padding-bottom: 1em;
 
 }
+/* flash messages */
+.flash-message >div{
+    background-color: white;
+    float: right;
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-family: 'Nunito', sans-serif;
+    padding: 1rem;
+    border-radius: 0.4rem 0 0 0.7rem;
+    border: #363636 2px solid;
+    border-right: none;
+    margin: 0.5em 0;
+    font-size: 1.3em;
+    color: #363636;
+    /* color: #fff; */
+    animation: flash 1s ease-in-out 3s 1 forwards;
+}
+
+.flash-message >.error{
+    background-color: #ff838d;
+}
+.flash-message >.success{
+    background-color: #84ff9f;
+}
+
 /* classes */
 .card .caption{
     padding: 9px;
@@ -79,21 +103,7 @@ footer >.bottom-banner{
     0 7px 55px rgba(0, 0, 0, 0.15)  ;
 
 }
-.outerJumbotron{
-    background-image: url('https://images.pexels.com/photos/3389532/pexels-photo-3389532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-    background-size: cover;
-    background-position-y: center;
-    background-position: right;
-}
-.jumbotron{
-    color: #d8d8d8;
-    height: 80vh;
-    background: none;
-    backdrop-filter: blur(2px) brightness(80%);
-}
-.jumbotron > h1 , p:last-child{
-    color:#fff;
-}
+
 /* ids */
 #camp-card-title{
     padding: 0.5em 1em 0.5em 1em;
@@ -228,29 +238,102 @@ footer >.bottom-banner{
     margin: 1em 0 0 0;
 }
 
-.flash-message >div{
-    background-color: white;
-    float: right;
-    /* font-family: 'Ubuntu', sans-serif; */
-    font-family: 'Nunito', sans-serif;
-    padding: 1rem;
-    border-radius: 0.4rem 0 0 0.7rem;
-    border: #a0a0a0 2px solid;
-    border-right: none;
-    margin: 0.5em 0;
-    font-size: 1.3em;
-    color: #363636;
-    /* transform: translateX(100%); */
-    animation: flash 1s ease-in-out 3s 1 forwards;
+/* jumbotron */
+.jumbotron{
+    z-index: 1;
+    color: #d8d8d8;
+    height: 80vh;
+    background: none;
+    backdrop-filter: brightness(80%);
+}
+.jumbotron > h1 , p:last-child{
+    color:#fff;
 }
 
-.flash-message >.error{
-    background-color: #ffe6e8;
+.outerJumbotron >.slideshow {
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: inherit;
+    left: inherit;
+    background-color: #888;
 }
-.flash-message >.success{
-    background-color: #e7ffec;
+
+.outerJumbotron >.slideshow li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    top: inherit;
+    left: inherit;
+    background-size: cover;
+    background-position-y: center;
+    background-position: right;
+    /* background-position: 50% 50%; */
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s ease infinite; 
+}
+
+.outerJumbotron >.slideshow li:nth-child(1) { 
+    background-image: url(https://images.pexels.com/photos/3389532/pexels-photo-3389532.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(https://images.unsplash.com/photo-1533575770077-052fa2c609fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+    animation-delay: 10s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(https://images.unsplash.com/photo-1519443933981-c665c4a62ad4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+    animation-delay: 20s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(https://images.unsplash.com/photo-1516794267396-7ca9db9ea79f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80);
+    animation-delay: 30s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(https://images.unsplash.com/photo-1564932706725-8482823783a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80);
+    animation-delay: 40s; 
+}
+
+/* media queries */
+@media (min-width: 320px) and (max-width: 480px) {
+    .outerJumbotron , .outerJumbotron >.slideshow{
+        height: 50vh;
+        margin-bottom: 2rem;
+    }    
+}
+
+/* animations */
+@keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      /* animation-timing-function: ease; */
+    }
+    10% {
+      opacity: 1;
+      /* animation-timing-function: ease; */
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
 }
 
 @keyframes flash{
     100%{transform: translateX(100%);}
 }
+/* @keyframes imageAnimation{
+    0%  {background-image: url('https://images.unsplash.com/photo-1593934315159-dced6b067412?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1503&q=80');}
+    25% {background-image: url('https://images.unsplash.com/photo-1528224221541-40babe5bb315?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');}
+    50% {background-image: url('https://images.unsplash.com/photo-1516794267396-7ca9db9ea79f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80');}
+    75% {background-image: url('https://images.unsplash.com/photo-1533575770077-052fa2c609fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');}
+    100%{background-image: url('https://images.unsplash.com/photo-1564932706725-8482823783a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1510&q=80');}    
+} */

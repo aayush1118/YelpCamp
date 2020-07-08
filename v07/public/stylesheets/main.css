@@ -5,11 +5,11 @@ html{
     height: 100%;
 }
 body{
-    background-color: #f1f1f1;
+    background-color: #fbfbfb;
+    background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23d2d2d2' fill-opacity='0.51' fill-rule='evenodd'/%3E%3C/svg%3E");
     font-family: 'Nunito', sans-serif;
-    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23007bff' fill-opacity='0.11'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     background-attachment: fixed;   
-    height: 100%;
+    height: 100vh
 }
 
 /* footer  */
@@ -67,24 +67,55 @@ footer >.bottom-banner{
     /* font-family: 'Ubuntu', sans-serif; */
     font-family: 'Nunito', sans-serif;
     padding: 1rem;
-    border-radius: 0.4rem 0 0 0.7rem;
-    border: #363636 2px solid;
+    border-radius: 0.4rem 0 0 0.4rem;
+    /* border: #363636 2px solid; */
     border-right: none;
     margin: 0.5em 0;
     font-size: 1.3em;
-    color: #363636;
-    /* color: #fff; */
+    /* color: #363636; */
+    color: #fff;
     animation: flash 1s ease-in-out 3s 1 forwards;
+    box-shadow:
+    0 0px 3.6px rgba(0, 0, 0, 0.045),
+    0 0px 10px rgba(0, 0, 0, 0.065),
+    0 0px 24.1px rgba(0, 0, 0, 0.085),
+    0 0px 80px rgba(0, 0, 0, 0.13);
 }
 
 .flash-message >.error{
-    background-color: #ff838d;
+    /* background-color: #ff4252; */
+    background: rgb(199,16,16);
+    background: linear-gradient(90deg, rgba(199,16,16,1) 0%, rgba(255,86,2,1) 100%);
+    text-transform: capitalize;
+
 }
 .flash-message >.success{
-    background-color: #84ff9f;
+    /* background-color: #84ff9f; */
+    background: rgb(7,185,0);
+    background: linear-gradient(90deg, rgba(7,185,0,1) 0%, rgba(136,184,0,1) 86%);
+    text-transform: capitalize;
 }
 
 /* classes */
+.btn{
+    font-family: 'Nunito', sans-serif;
+
+}
+
+.btn-success{
+    /* color: black; */
+    /* font-weight: bold; */
+    background: #07b900;
+    background: linear-gradient(90deg, rgba(7,185,0,1) 0%, rgba(136,184,0,1) 86%);
+}
+.btn-success:hover{
+    
+}
+
+.btn-danger{
+    background: rgb(199,16,16);
+    background: linear-gradient(90deg, rgba(199,16,16,1) 0%, rgba(255,86,2,1) 100%);}
+
 .card .caption{
     padding: 9px;
 }
@@ -96,6 +127,12 @@ footer >.bottom-banner{
 .navbar{
     font-family: 'Montserrat', sans-serif;
 }
+
+.navbar .navbar-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .grid-container .btn:first-child{
     box-shadow:
     0 0.5px 15.8px rgba(0, 0, 0, 0.061),
@@ -213,12 +250,13 @@ footer >.bottom-banner{
 }
 
 #show-img{
-    /* max-width: 50vw; */
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 #show-card{
-    /* max-width: 50vw; */
+    max-width: 40em;
+    margin-top: 1em;
 }
 
 #camp-name{

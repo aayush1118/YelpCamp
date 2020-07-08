@@ -1,7 +1,9 @@
 const express = require("express");
 const passport = require("passport");
 const User = require("../models/user");
+const Campground = require("../models/campgrounds");
 const router = express.Router();
+const middleware = require("../middleware");
 
 
 //home page route
@@ -31,7 +33,6 @@ router.post("/signup", function(req,res){
 });
 
 //show login form
-
 router.get("/login",function(req,res){
     res.render("login");
 });
@@ -50,7 +51,21 @@ router.post("/login", passport.authenticate("local",
 router.get("/logout", function(req,res){
     req.logout();
     req.flash("success","logged out");
-    res.redirect("back");
+    res.redirect("/campgrounds");
+});
+
+//user account
+router.get("/user", (req,res) =>{
+    var currentUsername = req.user.username;
+    console.log(req.user);
+    Campground.find({author:{username:currentUsername}}, (err,allCampgrounds)=>{
+        if (err) {
+            console.log(err);
+        } else {
+            res.render("user",{campgrounds:allCampgrounds});
+            console.log(allCampgrounds);            
+        }
+    }); 
 });
 
 

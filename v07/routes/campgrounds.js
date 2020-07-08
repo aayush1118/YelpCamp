@@ -2,7 +2,7 @@ const express    = require("express");
 const Campground = require("../models/campgrounds");
 const { findByIdAndUpdate } = require("../models/comment");
 const router     = express.Router();
-const middleware = require("../middleware")
+const middleware = require("../middleware");
 
 
 //INDEX - campground route
@@ -12,7 +12,7 @@ router.get("/",function(req,res){
         if (err) {
             console.log(err);
         } else {
-            res.render("campgrounds/index",{campgrounds:allCampgrounds});
+            res.render("campgrounds/index",{campgrounds:allCampgrounds});            
         }
     });
 
@@ -21,7 +21,7 @@ router.get("/",function(req,res){
 
 
 //NEW
-router.get("/new",  middleware.isLoggedIn,function(req,res){
+router.get("/new",  middleware.isLoggedIn, function(req,res){
     res.render("campgrounds/new");
 });
 
@@ -82,16 +82,6 @@ router.put("/:id", middleware.checkCampgroundOwnership, function(req,res){
 });
 
 //DESTROY
-// router.delete("/:id", function(req,res){
-//     Campground.findByIdAndRemove(req.params.id, function(err){
-//         if (err) {
-//             res.redirect("/campgrounds");
-//         } else {
-//             res.redirect("/campgrounds");
-//         }
-//     })
-// })
-
 router.delete("/:id",middleware.checkCampgroundOwnership ,async(req, res) => {
     try {
       let foundCampground = await Campground.findById(req.params.id);
@@ -102,10 +92,5 @@ router.delete("/:id",middleware.checkCampgroundOwnership ,async(req, res) => {
       res.redirect("/campgrounds");
     }
 });
-
-
-
-
-
 
 module.exports = router;

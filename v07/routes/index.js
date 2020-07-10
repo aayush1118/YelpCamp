@@ -4,6 +4,8 @@ const User = require("../models/user");
 const Campground = require("../models/campgrounds");
 const router = express.Router();
 const middleware = require("../middleware");
+const { all } = require("./campgrounds");
+// const { router, delete } = require("./campgrounds");
 
 
 //home page route
@@ -54,19 +56,13 @@ router.get("/logout", function(req,res){
     res.redirect("/campgrounds");
 });
 
-//user account
+
+//user profile route
 router.get("/user", (req,res) =>{
-    var currentUsername = req.user.username;
-    console.log(req.user);
-    Campground.find({author:{username:currentUsername}}, (err,allCampgrounds)=>{
-        if (err) {
-            console.log(err);
-        } else {
-            res.render("user",{campgrounds:allCampgrounds});
-            console.log(allCampgrounds);            
-        }
-    }); 
+    // res.render("user",{campgrounds: req.user.userCampgrounds});
+    res.send(req.user);
 });
 
 
 module.exports = router;
+

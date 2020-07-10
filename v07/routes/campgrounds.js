@@ -3,6 +3,8 @@ const Campground = require("../models/campgrounds");
 const { findByIdAndUpdate } = require("../models/comment");
 const router     = express.Router();
 const middleware = require("../middleware");
+const User = require("../models/user");
+const { userCampgrounds } = require("../middleware");
 
 
 //INDEX - campground route
@@ -15,8 +17,6 @@ router.get("/",function(req,res){
             res.render("campgrounds/index",{campgrounds:allCampgrounds});            
         }
     });
-
-    // res.render("campgrounds",{campgrounds:campgrounds});
 });
 
 
@@ -24,6 +24,7 @@ router.get("/",function(req,res){
 router.get("/new",  middleware.isLoggedIn, function(req,res){
     res.render("campgrounds/new");
 });
+
 
 //CREATE
 router.post("/", middleware.isLoggedIn,function(req,res){
@@ -42,11 +43,13 @@ router.post("/", middleware.isLoggedIn,function(req,res){
         if (err) {
             console.log(err);            
         } else {
+            //add campground to user model
+            req.user.userCampgrounds.push(newSubmition._id);
+            req.user.save();
             //redirect to campground
             res.redirect("/campgrounds");            
         }
     });
-
 });
 
 //SHOW

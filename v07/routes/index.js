@@ -4,7 +4,9 @@ const User = require("../models/user");
 const Campground = require("../models/campgrounds");
 const router = express.Router();
 const middleware = require("../middleware");
-const { all } = require("./campgrounds");
+const { all, route } = require("./campgrounds");
+const { Router } = require("express");
+const { userCampgrounds } = require("../middleware");
 // const { router, delete } = require("./campgrounds");
 
 
@@ -56,11 +58,26 @@ router.get("/logout", function(req,res){
     res.redirect("/campgrounds");
 });
 
-
-//user profile route
-router.get("/user", (req,res) =>{
-    // res.render("user",{campgrounds: req.user.userCampgrounds});
-    res.send(req.user);
+router.get('/user',async(req,res)=>{
+    let userCampIds = req.user.userCampgrounds;
+    let userCampgrounds =[];
+    try {
+        for (let index = 0; index < userCampIds.length; index++) {
+            const element = userCampIds[index];
+            await Campground.findById(element,(err,foundCampground)=>{
+                if (err) {
+                    console.log(err);
+                } else {
+                    if (foundCampground) {
+                        return userCampgrounds.push(foundCampground);
+                    }
+                }
+            });   
+        }
+        res.render('user',{userCampgrounds:userCampgrounds})
+    } catch (error) {
+        res.send("error");
+    }
 });
 
 

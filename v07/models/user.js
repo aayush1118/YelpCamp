@@ -10,7 +10,11 @@ var UserSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: "Campground"
         }
-    ]
+    ],
+
+    userProfileImg: {type:String, default: '/png/user.png'},
+    
+    date: {type: Date, default:Date.now}
 });
 
 UserSchema.plugin(passportLocalMongoose);

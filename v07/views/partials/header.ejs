@@ -8,17 +8,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/main.css">
     <script src="https://kit.fontawesome.com/10e3f17fc7.js" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
     <!-- navbar  -->
-    <nav class="navbar navbar-dark bg-primary navbar-expand-lg" id="nav-top">
+    <nav class="navbar navbar-dark navbar-expand-lg" id="nav-top">
         <div class="container-fluid">
             <a href="/" class="navbar-brand"><i id="yelpCampLogo" class="fas fa-compass"></i> YelpCamp</a>
                <ul class="navbar-nav navbar-right">
-                <% if (!currentUser) { %>
+                   <!-- theme toggle -->
+                   <li class="nav-item active" id="switch_li">
+                       <button class="dark" id="themeSwitch"><img id="themeImg" src="/svg/night.svg" alt=""></button>
+                   </li>
+                   <!-- theme script  -->
+                   <script>
+                    const btn = document.querySelector("#themeSwitch");
+                    const body = document.body;
+                    btn.addEventListener("click", function() {
+                        body.classList.toggle('dark-theme');
+                    });
+                    </script>
+                    <!-- ---- -->
+                   <% if (!currentUser) { %>
+                   <!-- login info -->
                     <li class="nav-item active"><a href="/login" class="nav-link">Login</a></li>
                     <li class="nav-item"><a href="/signup" class="nav-link">SignUp</a></li>                       
                    <% } else { %>
+                    <!-- user info -->
                     <li class="nav-item active" id="nav-username">
                         <a href="/user" class="nav-link">
                             <i class="fas fa-user-circle"></i> <%=currentUser.username %>
